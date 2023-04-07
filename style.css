@@ -4,6 +4,111 @@
     box-sizing: border-box;
 }
 
+:root {
+    --white: hsl(0, 0%, 98%);
+    --grey: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
 body{
     font-family: 'Epilogue', sans-serif;
+}
+
+
+header {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+
+
+/* sidebar  */
+
+#sidebar{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(1000px);
+    padding: 20px;
+    background-color: var(--white);
+    height: 100vh;
+    width: 70%;
+}
+
+#sidebar .close-sidebar{
+    position: absolute;
+    right: 20px;
+}
+
+#sidebar .sidebar-menu-links{
+    margin-top: 7vh;
+    padding-left: 20px;
+}
+
+/* sidebar dropdown  */
+
+#sidebar .sidebar-menu-links ul{
+    list-style: none;
+}
+
+#sidebar .sidebar-menu-links ul li{
+    margin: 20px 0;
+}
+
+#sidebar .sidebar-menu-links ul li .arrow-down{
+    font-size: 20px;
+    color: black;
+    margin-left: 10px;
+}
+
+#sidebar .sidebar-menu-links ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--grey);
+        font-weight: 500;
+}
+
+#sidebar .sidebar-menu-links ul li ul{
+    padding-left: 20px;
+}
+
+#sidebar .sidebar-menu-links ul li ul li{
+    display: flex;
+    align-items: center;
+}
+
+#sidebar .sidebar-menu-links ul li ul li img{
+    width: 20px;
+    margin-right: 20px;
+}
+
+#sidebar .sidebar-menu-links ul li ul li a{
+    color: var(--grey);
+    font-weight: 500;
+}
+
+#sidebar .sidebar-menu-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar .sidebar-menu-buttons button{
+    padding: 10px 0;
+    font-size: 16px;
+    border-radius: 20px;
+    color: var(--grey);
+    font-weight: 500;
+}
+
+#sidebar .sidebar-menu-buttons .login{
+        margin-bottom: 10px;
+        border: none;
+}
+
+#sidebar .sidebar-menu-buttons .register{
+    border: 1px solid hsl(0, 0%, 8%);
 }
