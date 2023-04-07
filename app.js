@@ -32,10 +32,21 @@ let sidebarDropdown = document.querySelectorAll('.dropdown');
 
 let sidebarLinks = document.getElementsByClassName('sidebar-link');
 
+// declaring arrow svg 
+
+let arrow1 = document.getElementById('arrow1')
+
+let arrow2 = document.getElementById('arrow2')
+
 sidebarLinks[0].addEventListener('click', openFeaturesDropdown);
 
 function openFeaturesDropdown(){
-    sidebarDropdown[0].classList.toggle('sidebar-dropdown-open')
+    sidebarDropdown[0].classList.toggle('sidebar-dropdown-open');
+    if (sidebarDropdown[0].classList.contains('sidebar-dropdown-open')){
+        arrow1.style.transform = "rotate(180deg)";
+    }else{
+        arrow1.style.transform = "rotate(0deg)";
+    }
 }
 
 
@@ -43,10 +54,11 @@ sidebarLinks[1].addEventListener('click', openCompanyDropdown);
 
 function openCompanyDropdown(){
     sidebarDropdown[1].classList.toggle('sidebar-dropdown-open')
+    if (sidebarDropdown[1].classList.contains('sidebar-dropdown-open')){
+        arrow2.style.transform = "rotate(180deg)";
+    }else{
+        arrow2.style.transform = "rotate(0deg)";
+    }
 }
-console.log(sidebarDropdown)
-console.log(sidebarLinks)
-
-
 
 
