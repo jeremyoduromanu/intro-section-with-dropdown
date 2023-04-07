@@ -35,8 +35,13 @@ header {
     transform: translateX(1000px);
     padding: 20px;
     background-color: var(--white);
-    height: 100vh;
+    height: 100%;
     width: 70%;
+    transition: transform .3s ease-in-out;
+}
+
+.sidebar-open{
+    transform: translateX(0) !important;
 }
 
 #sidebar .close-sidebar{
@@ -61,7 +66,7 @@ header {
 
 #sidebar .sidebar-menu-links ul li .arrow-down{
     font-size: 20px;
-    color: black;
+    color: var(--grey);
     margin-left: 10px;
 }
 
@@ -69,11 +74,18 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: var(--grey);
-        font-weight: 500;
+    font-weight: 500;
 }
 
 #sidebar .sidebar-menu-links ul li ul{
     padding-left: 20px;
+    display: none;
+    transition: all 2s ease;
+}
+
+#sidebar .sidebar-dropdown-open{
+    display: block !important;
+    transition: all .5s ease;
 }
 
 #sidebar .sidebar-menu-links ul li ul li{
