@@ -28,7 +28,7 @@ header {
 /* sidebar  */
 
 #sidebar{
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -37,11 +37,14 @@ header {
     background-color: var(--white);
     height: 100%;
     width: 70%;
-    transition: transform .3s ease-in-out;
+    transition: opacity 5s ease;
+    opacity: 0;
 }
 
 .sidebar-open{
     transform: translateX(0) !important;
+    display: block !important;
+    opacity: 1 !important;
 }
 
 #sidebar .close-sidebar{
@@ -53,6 +56,7 @@ header {
     margin-top: 7vh;
     padding-left: 20px;
 }
+
 
 /* sidebar dropdown  */
 
@@ -68,6 +72,7 @@ header {
     font-size: 20px;
     color: var(--grey);
     margin-left: 10px;
+    transition: transform .5s ease;
 }
 
 #sidebar .sidebar-menu-links ul li a{
@@ -123,4 +128,69 @@ header {
 
 #sidebar .sidebar-menu-buttons .register{
     border: 1px solid hsl(0, 0%, 8%);
+}
+
+main{
+    height: 90vh;
+    width: 100%;
+}
+
+.hero .hero-bg{
+    height: 40vh;
+    width: 100%;
+    background-image: url(./images/image-hero-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-text{
+    padding: 50px 5%;
+}
+
+.hero-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-header h1{
+    font-size: 45px;
+    color: var(--black);
+}
+
+
+.hero-desc{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-desc p{
+    font-size: 22px;
+    color: var(--grey);
+    line-height: 35px;
+}
+
+.hero-learn-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-learn-btn button{
+    padding: 20px 30px;
+    border: none;
+    background-color: var(--black);
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 20px;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.orgs {
+    display: flex;
+    padding: 0 5% 50px 5%;
+    justify-content: space-between;
+}
+
+.orgs img {
+    width: 80px;
 }
