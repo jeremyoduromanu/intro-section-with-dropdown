@@ -61,4 +61,18 @@ function openCompanyDropdown(){
     }
 }
 
+ 
+// desktop dropdown on hover 
+
+// let dropDesk1 = document.querySelectorAll(".drop-desk")[0];
+// let dropDesk2 = document.querySelectorAll(".drop-desk")[1];
+
+// let featuresArrow =  document.getElementsByClassName('features-arrow')[0];
+
+
+// if (dropDesk1.style.display = 'block'){
+//     featuresArrow.style.transform = 'rotate(-180deg)';
+// }else{
+//     featuresArrow.style.transform = 'rotate(0deg)'
+// }
 
