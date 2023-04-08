@@ -329,6 +329,7 @@ nav .navlinks {
         font-family: inherit;
         color: var(--grey);
         transition: color .5s ease-in;
+        cursor: pointer;
     }
 
     .nav-buttons button:hover{
